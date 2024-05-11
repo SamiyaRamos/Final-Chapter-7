@@ -1,5 +1,11 @@
+/*
+Author:
+Date:
+File Name: 
+*/
+
 /* CSS Reset */
-body, header, main, footer, h1, h3, section, article, aside {
+body, header, nav, main, footer, h1, h3, div {
     margin: 0;
     padding: 0;
     border: 0;
@@ -7,46 +13,84 @@ body, header, main, footer, h1, h3, section, article, aside {
 
 /* Style rule for body */
 body {
-	background-color: #dfe7c4;
+    background-color: #ffebdc;
 }
 
 /* Style rule for header */
 header {
-	font-family: Verdana, Arial, sans-serif;
-	margin-top: 0.2em;
-	background-color: #628c45;
-	color: #dfe7c4;
-	padding: 2%;
-    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    margin-top: 0.2em;
+    background-color: #9d4502;
+    color: #feab6d;
+    padding: 2%;
+}
+
+/* Style rules for nav area */
+nav {
+    background-color: #341c09;
+    padding: 0.5%;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    color: #feab6d;
+    padding: 1% 3%;
+    text-decoration: none;
 }
 
 /* Style rules for main content  */
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-	background-color: #fff;
-    padding: 0 2%;
+    padding: 1em;
 }
 
-/* Style rule for each section */
+main h1 {
+    color: #341c09;
+    text-align: center;
+    margin-top: 2%;
+}
+
 section {
-    width: calc(33.33% - 4%); /* Three columns with a little space between */
-    padding: 2%;
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-    background-color: #fff;
-    margin-bottom: 2%;
+    color: #fff;
+    padding: 3%;
+    background-color: #9d4502; /* Added declaration */
+    margin: 1% 0; /* Added declaration */
 }
 
-/* Style rule for aside */
-aside {
-    width: calc(33.33% - 4%);
+article {
     padding: 2%;
-    box-sizing: border-box;
-    background-color: #fff;
+}
+
+aside {
+    background-color: #feab6d;
+    padding: 2%;
+    margin-top: 1%;
+    color: #9d4502;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    border-radius: 15px;
+    text-shadow: 4px 4px 8px #fc7307; /* Added declaration */
+    box-shadow: 4px 4px 10px #183440; /* Added declaration */
 }
 
 footer {
-	font-size: .70em;
-	text-align: center;
+    font-size: .70em;
+    text-align: center;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 700px), print {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Added declaration */
+        grid-gap: 20px; /* Added declaration */
+    }
+
+    aside {
+        grid-column: span 3; /* Added declaration */
+    }
 }
